@@ -4,8 +4,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.9.0] - 2022-05-10
 
+## Added
+
+- Add version of builder methods with generic types for cleaner syntax. #110
+- Support (serializing) sub types with generic type parameters when using JsonSubtypesConverterBuilder #135
+- Add cache of type's attributes #119
+
+### Fixed
+
+- Newtonsoft.Json dependency version should be lowest supported, not latest available #101
+- Multiple type discriminators in JSON silently passes. #100
+- Incorrect handling of datetime field in a sub-type #114
+- Too many target framework inside the nuget package #48
+- Copy MaxDepth when creating internal JObjectReader #137
+- Fix deserialization of hierarchy with multiple levels #118
+- The nuget package is available on https://www.nuget.org/packages/JsonSubTypes/1.9.0
 
 ## [1.8.0] - 2020-09-24
 
